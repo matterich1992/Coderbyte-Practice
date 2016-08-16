@@ -58,4 +58,17 @@ str =str.split(' ');
 findLongestWord("The quick brown fox jumped over the lazy dog");
 
 
+// 5. titleCase makes first letter uppercase of each word and Lowercases the rest
+function titleCase(str){
+  str = str.toLowerCase().split(' ');
+  for(var i=0; i<str.length;i++){
+    str[i]=str[i][0].toUpperCase()+str[i].substring(1);
+  }
+  str = str.join(" ");
+  return str;
+}
+
+titleCase("I'm a little tea pot");
+
+
 
