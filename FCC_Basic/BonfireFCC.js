@@ -82,7 +82,7 @@ function largestOfFour (arr){
 				largestNum= arr[i][j];
 			}
 		}
-		results[i]= largestNum;
+		results[i]= largestNum; //results.push(largestNum);
 	}
 	return results;
 }
