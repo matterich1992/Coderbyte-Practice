@@ -89,4 +89,28 @@ function largestOfFour (arr){
 
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
+// 7. Confirm the Ending
+ function confirmEnd (str, target){
+  if(str.substr(-target.length)===target){
+    return true;
+  } else {
+    return false;
+  }
+ };
 
+ confirmEnd('Bastian', 'n');
+
+
+ //8. repeat a String
+
+ function repeat (str, num){
+var repeated = '';
+
+while(num>0){
+  repeated+=str + ' ';
+  num--
+}
+return repeated;
+ };
+
+ repeat("Hello", 3);
