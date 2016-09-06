@@ -37,6 +37,7 @@ twoSmallestSum([34,56,1,23,42]); // should return 24
 
 
 // find how many divisors there are in a number
+// Example 5 gets 2 divisors 1 and 5 so answer is 2
 
 function getDivisorsCnt(num){
     var results = [];
@@ -50,7 +51,24 @@ function getDivisorsCnt(num){
 
 getDivisorsCnt(48); --> //10
 
+function nameScore (str){
+	str=str.toUpperCase();
+	var alpha = {'ABCDE':1, 'FGHIJ':2, 'KLMNO':3, 'PQRST':4, 'UVQXY':5};
+	var results={};
+	var total = 0;
+
+	for (var i=0;i<str.length;i++){
+		for(var key in alpha){
+			if(key.indexOf(str[i])!==-1){
+				total+=alpha[key];
+			}
+		}
+	}
+	results[str]=total;
+	return results;
+}
+
+nameScore("Joelle");
 
 
-
-
+ 
