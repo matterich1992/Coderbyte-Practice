@@ -71,4 +71,69 @@ function nameScore (str){
 nameScore("Joelle");
 
 
+//Longest Palindrome
+
+function longestPalindrome(s){
+var longest = 0;
+
+for(var i=0;i<=s.length;i++){
+  for(var j=i+1;j<=s.length;j++){
+  	var str = s.slice(i,j); //slice starting at i up to j_ shallow copy into new Array
+  	var l = str.length;
+  	if(isPalindrome(str) &&  longest<l){
+  		longest = l;
+  	 }
+   }
+  } 
+return longest;
+}
+
+
+
+function isPalindrome(s){ //simple solve for palindrome
+	var arr = s.split("");
+	return s===arr.reverse().join('');
+}
+
+
+longestPalindrome("adeaabbaaccd"); // should return 6;
+
+//Possible-Test-Cases
+
+/*
+
+Test.assertEquals(longestPalindrome("adcaabbaacde"), 6); 
+Test.assertEquals(longestPalindrome('aa'), 2);
+Test.assertEquals(longestPalindrome('cccdddccc'),9); 
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
