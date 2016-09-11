@@ -109,30 +109,28 @@ Test.assertEquals(longestPalindrome('cccdddccc'),9);
 */
 
 
+//Find the "shortest word in a string"
 
+function shortestStr(str){
+	str = str.split(' '); //split into individual words
+	var shortest = null;
+	for(var i =0;i<str.length;i++){
+		if(shortest===null || str[i].length<shortest){
+			shortest = str[i].length;
+		}
+	}
+	return shortest;
+}
 
+//Another way
 
+function shortestStr(str){
+str = str.split(' ');
+str.sort(function(a,b){return a.length - b.length;});
+return str[0];
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//this can also work for finding the longest word in a string as well.
 
 
 
