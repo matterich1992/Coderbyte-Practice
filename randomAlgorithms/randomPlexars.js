@@ -132,6 +132,20 @@ return str[0];
 
 //this can also work for finding the longest word in a string as well.
 
+//Find the odd number(s) out when given two arrays
 
+function oddOut (a, b){
+	var results = [];
+	for(var i=0;i<a.length;i++){
+		if(b.indexOf(a[i])===-1){
+			results.push(a[i]);
+		}
+	
+	}
+return results;
+}
+
+//Test
+oddOut([1,3,5,6,7,8],[1,3,5,6])//--> should return 4 and 7
 
  
