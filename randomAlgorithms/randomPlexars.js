@@ -148,4 +148,20 @@ return results;
 //Test
 oddOut([1,3,5,6,7,8],[1,3,5,6])//--> should return 4 and 7
 
- 
+
+//Array.prototype.numberOfOccurences
+
+
+ Array.prototype.numberOfOccurences = function(val){
+	var counter = 0;
+	for(var i=0;i<this.length;i++){
+		if(this[i]===val){
+			counter++;
+		}
+	}
+	return counter;
+};
+
+var arr = [4, 0, 4];
+
+arr.numberOfOccurences(4);
