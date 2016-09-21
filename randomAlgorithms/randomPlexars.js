@@ -165,3 +165,46 @@ oddOut([1,3,5,6,7,8],[1,3,5,6])//--> should return 4 and 7
 var arr = [4, 0, 4];
 
 arr.numberOfOccurences(4);
+
+
+//How many years  until we see ‘p’ inhabitants present in the population?
+function nbYear(p0, percent, aug,p){
+     var count=0;
+       while(p0<p){
+          p0+=p0*percent/100 + aug;
+               
+               count++;
+                }
+  return count;
+}
+ 
+nbYear(1500, 5, 100, 5000);
+
+// Sum the Digits of an individual number
+
+//Sum Digits
+function sumDigits(number) {
+number = Math.abs(number).toString().split('');
+var total=0;
+  for(var i=0;i<number.length;i++){
+    total+=parseInt(number[i]);
+                }
+return total;      
+}
+ 
+sumDigits(135);
+ 
+
+
+//Complete Pattern number #3
+function pattern(n) {
+  var results = []; 
+  var line = '';
+  for(var i = n; i > 0; i--) {
+    line += i;
+    results.push(line);
+  }
+  return results.join('\n');
+}
+ 
+
