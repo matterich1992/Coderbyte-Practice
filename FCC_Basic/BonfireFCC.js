@@ -114,3 +114,15 @@ return repeated;
  };
 
  repeat("Hello", 3);
+
+ //alternate way for repeat a string
+
+ function repeatstr(str,num){
+var results = '';
+for(var i =1;i<=num;i++){
+  results+=str + ' ';
+}
+return results;
+}
+
+repeatstr("Hello", 3);
