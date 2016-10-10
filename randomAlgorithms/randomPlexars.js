@@ -192,7 +192,7 @@ var total=0;
 return total;      
 }
  
-sumDigits(135);
+sumDigits(135); // --> 9
  
 
 
@@ -207,4 +207,11 @@ function pattern(n) {
   return results.join('\n');
 }
  
+//return Binary Addition
+function addBinary(a,b){
+	return (a+b).toString(2);
+}
+
+addBinary(1,1); //--> '11'
+
 
