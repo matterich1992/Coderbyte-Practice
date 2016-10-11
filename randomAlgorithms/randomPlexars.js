@@ -215,3 +215,15 @@ function addBinary(a,b){
 addBinary(1,1); //--> '11'
 
 
+function concatAdd(array1, array2){
+	var total = 0;
+	var concat = array1.concat(array2);
+		for(var i =0;i<concat.length;i++){
+			total +=concat[i];
+		}
+		return total;
+}
+
+concatAdd([1,2,3,4] ,[2,3,5,6,8]); // --> 34
+
+
